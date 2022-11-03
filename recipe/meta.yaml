@@ -1,4 +1,4 @@
-{% set version = "0.2.0" %}
+{% set version = "0.3.0" %}
 
 package:
   name: springcraft
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://github.com/biotite-dev/springcraft/archive/v{{ version }}.tar.gz
-  sha256: 61c08e762ada6722b35b65428145ae3a176a653c6f9e7d0badc51d2a262080af
+  sha256: e1b2fbe77ae77078f6170b9c8fec85c6552d6a9559891e048bbba3fc084da65b
 
 build:
   number: 0
