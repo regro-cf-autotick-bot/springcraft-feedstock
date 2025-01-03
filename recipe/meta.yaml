@@ -9,17 +9,17 @@ source:
   sha256: e1b2fbe77ae77078f6170b9c8fec85c6552d6a9559891e048bbba3fc084da65b
 
 build:
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . -vv
   noarch: python
 
 requirements:
   host:
-    - python >=3.7
+    - python {{ python_min }}
     - pip
     - poetry
   run:
-    - python >=3.7
+    - python >={{ python_min }}
     - numpy >=1.15
     - biotite >=0.32
 
@@ -29,6 +29,7 @@ test:
   requires:
     - pytest
     - prody
+    - python {{ python_min }}
   commands:
     - pytest --ignore tests/test_version.py
 
